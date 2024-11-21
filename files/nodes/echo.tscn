@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvlpws8bxxwjq"]
+
+[ext_resource type="Script" path="res://scripts/echo.gd" id="1_prtqn"]
+[ext_resource type="Texture2D" uid="uid://denbgigxpfqyc" path="res://sprites/echo.png" id="2_1r38s"]
+[ext_resource type="AudioStream" uid="uid://bifvcyviecha1" path="res://audio/echolocate.wav" id="3_4nir8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pemt6"]
+size = Vector2(32, 48)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_avxi6"]
+
+[node name="echo" type="Node2D"]
+top_level = true
+script = ExtResource("1_prtqn")
+
+[node name="echoArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="echoArea"]
+shape = SubResource("RectangleShape2D_pemt6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_avxi6")
+texture = ExtResource("2_1r38s")
+
+[node name="EcholocateNoise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4nir8")
+pitch_scale = 0.71
+attenuation = 4.75683
+bus = &"SFX"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

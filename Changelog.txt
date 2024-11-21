@@ -1,0 +1,83 @@
+
+2024/11/3
+- Started the project
+- Imported basic user preferences script
+- Created basic animations for player
+- Created basic tileset sprites
+- Added tileset/tilemap for ground tiles
+
+2024/11/4
+- Created jump icon sprite
+- Added a canvas layer (for UI)
+- Added jump count visualizer (+ particle effect)
+- Added smooth camera and camera margin
+- Jump related bug fixes
+
+2024/11/6
+- Created echolocation sprite
+- Created foliage tileset sprites
+- Added secret areas
+- Added echolocation mechanic
+- Foliage now dissapears when inside secret areas
+
+2024/11/10
+- Started the changelog documentation
+- Created aim sprites
+- Added aiming visualizer
+- Added controller support
+
+2024/11/12
+- Created fruit tileset
+- Created pitou
+- Added dashing
+- Added player particles
+- Added dash pickup
+- Added echolocation pickup
+- Added jump pickup
+- Altered player prefs jumps to list
+
+2024/11/13
+- Created button themes
+- Added main menu
+- Added options menu
+- Added palettes (pain)
+- Added scene transitions
+
+2024/11/15
+- Added pause menu
+- Added player sfx
+- Added palette colectables
+- Greatly impoved starting area
+
+2024/11/16
+- Greatly impoved the entire map
+- Made the outside area
+
+2024/11/17
+- Created pitouette sprite
+- Added pitou secret area
+- Added ending screen
+- Added music
+- Did a few full playthroughs
+- Fixed ground tile issues
+
+2024/11/21
+- Added button prompts
+- Fixed echo colour bug
+- Fixed transition color bug
+- Balance changes (mostly timers)
+- Improved title screen
+- Exported the game
+
+-----------------------------------
+
+TODO:
+improve title screen
+make illustration about it
+echolocate animation
+
+-----------------------------------
+
+ffffff
+d95763
+222034

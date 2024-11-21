@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnu1qx011yg1g"]
+
+[ext_resource type="AudioStream" uid="uid://cyik16fwbhe15" path="res://audio/My Best Friend is a dog.mp3" id="1_xxx3c"]
+[ext_resource type="Script" path="res://scripts/music.gd" id="2_j7cjq"]
+[ext_resource type="AudioStream" uid="uid://7kuev7wb238m" path="res://audio/softclick.wav" id="3_kwu4o"]
+[ext_resource type="AudioStream" uid="uid://d21ef16f014p8" path="res://audio/confirmclick.wav" id="4_kvw06"]
+
+[node name="Music" type="Node"]
+script = ExtResource("2_j7cjq")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_xxx3c")
+volume_db = -5.0
+autoplay = true
+bus = &"Music"
+
+[node name="softCLick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kwu4o")
+bus = &"SFX"
+
+[node name="confirmclick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kvw06")
+bus = &"SFX"
+
+[connection signal="finished" from="music" to="." method="_on_music_finished"]

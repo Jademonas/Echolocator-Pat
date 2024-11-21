@@ -1,0 +1,46 @@
+Game Off 2024 
+Theme: SECRETS
+
+Optional challenges:
+Small Pallete (4 or less colors)
+Cheat mode (cheat codes)
+Speedrun (focus on speed and shortcuts)
+
+---------------------------------------------
+
+a 2d metroidvania where most abilites are hidden 
+(aka rooms that are revealed when walked into)
+
+some central mechanic to help you locate rooms
+theres a cooldown to use it tho (cheat code to refresh it?)
+- echolocation (!): send out a wave and it bounces off secrets
+
+main character is bat then? 
+or maybe a beluga (and make the whole game underwater?)
+both cases may indicate free roam flight, hm
+
+visual style?
+- we can go pixel art, same as last game
+- try something new? (maybe not with this already huge scope)
+
+so. detective bat metroidvania
+
+OH we can do a pacifist style game, no combat!
+
+abilities:
+- shriek: stuns enemies momentarily
+- dash: swoop quickly to not take damage from enemies
+- maybe you dont start out being able to fly?
+- pickups for health and 'mana' 100%
+
+flying consumes the same mana as echolocate
+
+mana system can be similar to 'a short hike'/'refreshed', 
+with defined usable 'double' jumps
+
+
+---------------------------------------------
+
+Post Jam Note:
+There are no enemies in the game, i thought it would complicate a bit too much and wouldnt fit 
+

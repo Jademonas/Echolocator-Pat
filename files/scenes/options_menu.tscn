@@ -1,0 +1,131 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpuom1d6wkrg2"]
+
+[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_rjtns"]
+[ext_resource type="Theme" uid="uid://c6pbcoo6tedmf" path="res://shaders/default.tres" id="2_701wg"]
+[ext_resource type="Texture2D" uid="uid://ceitukomu3nmf" path="res://sprites/sprite black.png" id="4_45301"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ortu8"]
+
+[node name="OptionsMenu" type="Control"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ortu8")
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource("2_701wg")
+script = ExtResource("1_rjtns")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+use_parent_material = true
+layout_mode = 0
+offset_left = -688.0
+offset_top = -408.0
+offset_right = -648.0
+offset_bottom = -368.0
+scale = Vector2(33.7045, 21.1025)
+texture = ExtResource("4_45301")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+use_parent_material = true
+layout_mode = 0
+offset_left = -392.0
+offset_top = -264.0
+offset_right = -192.0
+offset_bottom = -128.0
+scale = Vector2(4, 4)
+theme = ExtResource("2_701wg")
+
+[node name="musicVolume" type="HSlider" parent="VBoxContainer"]
+use_parent_material = true
+layout_mode = 2
+theme = ExtResource("2_701wg")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Label" type="Label" parent="VBoxContainer/musicVolume"]
+use_parent_material = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = -12.0
+offset_right = 63.0
+offset_bottom = 11.0
+theme = ExtResource("2_701wg")
+theme_override_font_sizes/font_size = 9
+text = "Music Volume
+"
+
+[node name="br tag" type="Label" parent="VBoxContainer"]
+use_parent_material = true
+layout_mode = 2
+theme = ExtResource("2_701wg")
+theme_override_font_sizes/font_size = 9
+text = "
+"
+
+[node name="sfxVolume" type="HSlider" parent="VBoxContainer"]
+use_parent_material = true
+layout_mode = 2
+theme = ExtResource("2_701wg")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/sfxVolume"]
+use_parent_material = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = -11.0
+offset_right = 63.0
+offset_bottom = 12.0
+theme = ExtResource("2_701wg")
+theme_override_font_sizes/font_size = 9
+text = "SFX Volume
+"
+
+[node name="br tag2" type="Label" parent="VBoxContainer"]
+use_parent_material = true
+layout_mode = 2
+theme = ExtResource("2_701wg")
+theme_override_font_sizes/font_size = 9
+text = "
+"
+
+[node name="Palette" type="Button" parent="VBoxContainer"]
+use_parent_material = true
+layout_mode = 2
+theme = ExtResource("2_701wg")
+text = "Original
+"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Palette"]
+use_parent_material = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = -12.0
+offset_right = 63.0
+offset_bottom = 11.0
+theme = ExtResource("2_701wg")
+theme_override_font_sizes/font_size = 9
+text = "Palette
+"
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+use_parent_material = true
+layout_mode = 2
+theme = ExtResource("2_701wg")
+text = "Back
+"
+
+[connection signal="value_changed" from="VBoxContainer/musicVolume" to="." method="_on_music_volume_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/sfxVolume" to="." method="_on_sfx_volume_value_changed"]
+[connection signal="button_down" from="VBoxContainer/Palette" to="." method="_on_palette_button_down"]
+[connection signal="button_down" from="VBoxContainer/Back" to="." method="_on_back_button_down"]

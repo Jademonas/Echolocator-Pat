@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://basouwk4uynxy"]
+
+[ext_resource type="Script" path="res://scripts/echoPickup.gd" id="1_c10c5"]
+[ext_resource type="Texture2D" uid="uid://dm30w3n7ysffb" path="res://sprites/pickupsEcho.png" id="2_vrv74"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7gnm5"]
+radius = 32.0
+
+[node name="Echo pickup" type="Node2D"]
+use_parent_material = true
+script = ExtResource("1_c10c5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+use_parent_material = true
+texture = ExtResource("2_vrv74")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7gnm5")
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
